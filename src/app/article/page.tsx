@@ -6,15 +6,17 @@ type Props = {
 };
 
 const ArticleInfo = ({ searchParams }: Props) => {
-  if (
-    (searchParams && Object.entries(searchParams).length === 0) ||
-    !searchParams
-  ) {
-    return notFound();
-  }
+  // if (
+  //   (searchParams && Object.entries(searchParams).length === 0) ||
+  //   !searchParams
+  // ) {
+  //   return notFound();
+  // }
 
-  const article: Article = searchParams;
+  // console.log(searchParams);
 
+  const article : Article = searchParams;
+  
   return (
     <section className="flex flex-col lg:flex-row pb-24 px-0 lg:px-10" >
       {article.image && (
