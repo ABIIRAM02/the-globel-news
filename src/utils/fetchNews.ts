@@ -61,27 +61,17 @@ const fetchNews = async (
         category,
     );
     
-    try {
+    // try {
         const newsResponse = await res.json();
-        console.log("Response from server:", newsResponse);
-      
-        // Check if there are any errors in the response
-        if (newsResponse.errors) {
-          throw new Error('GraphQL Error: ' + newsResponse.errors.map((error:any) => error.message).join(', '));
-        }
-      
-        // Check if the data is present in the response
-        if (!newsResponse.data || !newsResponse.data.myQuery) {
-          throw new Error('Invalid response structure: myQuery field not found');
-        }
+  
       
         const news = sortNewsByImage(newsResponse.data.myQuery);
         return news;
 
-      } catch (error:any) {
-        console.error('Error fetching news:', error.message);
-        throw error;
-      }
+      // } catch (error:any) {
+      //   console.error('Error fetching news:', error.message);
+      //   throw error;
+      // }
       
 }
 
