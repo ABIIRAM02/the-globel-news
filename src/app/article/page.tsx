@@ -11,7 +11,7 @@ const ArticleInfo = () => {
 
   return (
     <section className="flex flex-col lg:flex-row pb-24 px-0 lg:px-10" >
-      
+
       {obj.image && (
         <img
           className="h-52 max-w-md mx-auto md:max-w-lg lg:max-w-xl object-cover rounded-lg shadow-md"
