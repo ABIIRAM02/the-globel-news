@@ -3,24 +3,15 @@ import LiveTimeStamp from "@/components/LiveTimeStamp";
 import { notFound } from "next/navigation";
 import { useSearchParams } from 'next/navigation'
 
-type Props = {
-  searchParams?: Article;
-};
 
-const ArticleInfo = ({ searchParams }: Props) => {
+const ArticleInfo = () => {
 
   const data = useSearchParams()
   const obj = Object.fromEntries(data.entries());
- 
- if (
-    (searchParams && Object.entries(searchParams).length === 0) ||
-    !searchParams
-  ) {
-    return notFound();
-  }
 
   return (
     <section className="flex flex-col lg:flex-row pb-24 px-0 lg:px-10" >
+      
       {obj.image && (
         <img
           className="h-52 max-w-md mx-auto md:max-w-lg lg:max-w-xl object-cover rounded-lg shadow-md"
