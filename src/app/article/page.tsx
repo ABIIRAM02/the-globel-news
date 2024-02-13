@@ -16,7 +16,8 @@ const ArticleInfo = ({ searchParams }: Props) => {
     (searchParams && Object.entries(searchParams).length === 0) ||
     !searchParams
   ) {
-    return notFound();
+    return console.log('article not found');
+    ;
   }
 
   return (
