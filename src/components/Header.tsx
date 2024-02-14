@@ -7,7 +7,7 @@ import DarkModeBtn from "./DarkModeBtn";
 const Header = () => {
   return (
     <header>
-      <section className="flex justify-center md:grid md:grid-cols-2 p-3 md:p-5 items-center">
+      <section className="flex justify-evenly md:grid md:grid-cols-2 p-3 md:p-5 items-center">
         <Link href="/" prefetch={false} className="uppercase">
           <h2 className="text-center text-xl lg:text-3xl font-serif ">
             The

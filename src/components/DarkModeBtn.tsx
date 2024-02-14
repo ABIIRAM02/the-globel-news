@@ -22,12 +22,12 @@ const DarkModeBtn = () => {
     <div>
       {currentTheme === "dark" ? (
         <IoMdSunny
-          className="h-8 w-8 cursor-pointer text-yellow-500"
+          className="h-6 w-6 md:h-8 md:w-8 cursor-pointer text-yellow-500"
           onClick={() => setTheme("light")}
         />
       ) : (
         <FaMoon
-          className="h-8 w-8 cursor-pointer text-gray-900"
+          className="h-6 w-6 md:h-8 md:w-8 cursor-pointer text-gray-900"
           onClick={() => setTheme("dark")}
         />
       )}
